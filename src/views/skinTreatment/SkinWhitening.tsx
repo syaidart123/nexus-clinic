@@ -24,6 +24,7 @@ import {
 import FAQ from "../../components/FAQ";
 import { useTranslation } from "@/src/i18n/client";
 import { fallbackLng } from "@/src/i18n/settings";
+import SectionBeforeAfter from "@/src/components/BeforeAfterCustomize";
 
 const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => {
   const { t } = useTranslation(locale, "skinWhitening");
@@ -48,6 +49,24 @@ const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => 
     {
       q: t("faq.q5"),
       a: t("faq.a5"),
+    },
+  ];
+
+    const transformations = [
+    {
+      id: 1,
+      before: "/images/B&A-skin/B&A-skin-whitening-treatment1.webp",
+      after: "/images/B&A-skin/B&A-skin-whitening-treatment1.webp",
+    },
+    {
+      id: 2,
+      before: "/images/B&A-skin/B&A-skin-whitening-treatment2.webp",
+      after: "/images/B&A-skin/B&A-skin-whitening-treatment2.webp",
+    },
+    {
+      id: 3,
+      before: "/images/B&A-skin/B&A-skin-whitening-treatment3.webp",
+      after: "/images/B&A-skin/B&A-skin-whitening-treatment3.webp",
     },
   ];
   return (
@@ -152,7 +171,7 @@ const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => 
 
         {/* Understanding Section */}
         <section className="py-24 bg-cream relative overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -200,6 +219,21 @@ const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                 {t("understanding.quote")}
               </motion.p>
             </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={staggerContainer}
+              className="max-w-4xl mx-auto flex justify-center items-center"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-xl mb-4">
+                 <img
+                   src="/images/skin/skin-whitening-treatment.webp"
+                   alt="skin whitening treatment"
+                   className="w-full h-auto"
+                 />
+                 <div className="absolute inset-0 bg-linear-to-t from-brown/40 to-transparent"></div>
+               </div>
+               </motion.div>
           </div>
         </section>
 
@@ -372,6 +406,8 @@ const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => 
             </motion.div>
           </div>
         </section>
+
+        <SectionBeforeAfter transformations={transformations} />
 
         {/* Price Comparison */}
         <section className="py-24 bg-light">

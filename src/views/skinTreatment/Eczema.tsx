@@ -27,6 +27,7 @@ import {
 import FAQ from "../../components/FAQ";
 import { useTranslation } from "@/src/i18n/client";
 import { fallbackLng } from "@/src/i18n/settings";
+import SectionBeforeAfter from "@/src/components/BeforeAfterCustomize";
 
 const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
   const { t } = useTranslation(locale, "eczema");
@@ -47,6 +48,24 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
     {
       q: t("faq.q4"),
       a: t("faq.a4"),
+    },
+  ];
+
+    const transformations = [
+    {
+      id: 1,
+      before: "/images/B&A-skin/B&A-eczema-treatment1.webp",
+      after: "/images/B&A-skin/B&A-eczema-treatment1.webp",
+    },
+    {
+      id: 2,
+      before: "/images/B&A-skin/B&A-eczema-treatment2.webp",
+      after: "/images/B&A-skin/B&A-eczema-treatment2.webp",
+    },
+    {
+      id: 3,
+      before: "/images/B&A-skin/B&A-eczema-treatment3.webp",
+      after: "/images/B&A-skin/B&A-eczema-treatment3.webp",
     },
   ];
   return (
@@ -79,12 +98,12 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                     </span>
                   </motion.div>
 
-                  <h1 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-7xl text-brown leading-tight">
+                  <h1 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-6xl text-brown leading-tight">
                     {t("hero.title1")}
                     <span className="block text-wine">{t("hero.title2")}</span>
                   </h1>
 
-                  <p className="text-xl text-taupe max-w-lg">
+                  <p className="text-lg text-taupe max-w-lg">
                     {t("hero.desc")}
                   </p>
                 </div>
@@ -96,7 +115,7 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-brown">{t("hero.sleepTitle")}</h3>
-                      <p className="text-taupe">
+                      <p className="text-taupe text-sm">
                         {t("hero.sleepDesc")}
                       </p>
                     </div>
@@ -110,7 +129,7 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                       <h3 className="font-semibold text-brown">
                         {t("hero.doctorTitle")}
                       </h3>
-                      <p className="text-taupe">
+                      <p className="text-taupe text-sm">
                         {t("hero.doctorDesc")}
                       </p>
                     </div>
@@ -134,7 +153,7 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
               >
                 <div className="relative w-full h-150 bg-light rounded-3xl shadow-2xl overflow-hidden">
                   {/* Glass Morphism Card */}
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80')] bg-cover"></div>
+                  <div className="absolute inset-0 bg-[url('/images/skin/eczema-treatment.webp')] bg-center bg-cover"></div>
 
                   {/* Decorative Elements */}
                   <div className="absolute top-10 left-10 w-32 h-32 bg-wine rounded-full blur-2xl opacity-30"></div>
@@ -349,6 +368,8 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
             </div>
           </div>
         </motion.section>
+
+        <SectionBeforeAfter transformations={transformations} />
 
         {/* Treatment Options */}
         <motion.section

@@ -1,7 +1,7 @@
 import HomePageNexus from "@/src/views/HomePage";
 import { languages } from "../../i18n/settings";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return languages.map((locale: string) => ({ locale }));
 }
 
