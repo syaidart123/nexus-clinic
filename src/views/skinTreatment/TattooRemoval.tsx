@@ -172,7 +172,7 @@ const TattooRemovalLanding = () => {
             </span>
           </motion.div>
 
-          <motion.h1
+          <motion.h2
             variants={fadeInUp}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-['Georgia',serif] leading-tight"
             style={{ color: colors.brown }}
@@ -182,7 +182,7 @@ const TattooRemovalLanding = () => {
             <span style={{ color: colors.wine }}>
               and move on with confidence?
             </span>
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             variants={fadeInUp}

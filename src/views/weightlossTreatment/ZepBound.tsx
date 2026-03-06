@@ -107,7 +107,7 @@ const ZepboundLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="text-5xl md:text-6xl lg:text-7xl font-serif text-brown leading-tight mb-6"
                 >
@@ -115,7 +115,7 @@ const ZepboundLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   <span className="block text-wine mt-2">
                     Let's change the story.
                   </span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

@@ -110,10 +110,10 @@ const ShockwaveLanding = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-georgia text-brown leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-georgia text-brown leading-tight">
                 Fix the blood flow problem,{" "}
                 <span className="text-wine">not just the moment.</span>
-              </h1>
+              </h2>
 
               <p className="text-lg text-taupe leading-relaxed max-w-lg">
                 If erections feel weaker, inconsistent, or don't last, it can

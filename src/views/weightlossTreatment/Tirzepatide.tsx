@@ -100,12 +100,12 @@ const TirzepatideLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <h1 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-7xl leading-tight">
+                <h2 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-7xl leading-tight">
                   Lose weight when{" "}
                   <span className="text-wine italic">willpower</span>
                   <br />
                   is not the problem
-                </h1>
+                </h2>
 
                 <p className="text-xl text-brown/80 max-w-lg">
                   Tirzepatide is a once weekly medical option that helps reduce

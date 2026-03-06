@@ -282,14 +282,14 @@ const AcneScarLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="font-georgia text-5xl lg:text-6xl text-brown leading-tight"
                 >
                   {t("hero.title1")}
                   <span className="text-wine block italic">{t("hero.title2")}</span>
                   <span className="text-rose block">{t("hero.title3")}</span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

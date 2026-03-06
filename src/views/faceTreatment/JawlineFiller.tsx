@@ -151,10 +151,10 @@ const JawlineFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                   </span>
                 </div>
 
-                <h1 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
+                <h2 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
                   {t("hero.title")}
                   <span className="block text-wine">{t("hero.titleHighlight")}</span>
-                </h1>
+                </h2>
 
                 <p className="text-lg text-brown/80 max-w-lg">
                   {t("hero.desc")}

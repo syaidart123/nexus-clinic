@@ -106,7 +106,7 @@ const DarkEyeCircleLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
@@ -115,7 +115,7 @@ const DarkEyeCircleLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                   <span className="text-brown">{t("hero.title1")} </span>
                   <br />
                   <span className="text-wine">{t("hero.title2")}</span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}

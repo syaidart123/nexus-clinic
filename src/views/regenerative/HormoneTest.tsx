@@ -163,7 +163,7 @@ export default function HormoneTestLanding({ locale = fallbackLng }: { locale?: 
                 </span>
               </motion.div>
 
-              <motion.h1
+              <motion.h2
                 variants={fadeInUp}
                 className="font-['Georgia',serif] text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
               >
@@ -174,7 +174,7 @@ export default function HormoneTestLanding({ locale = fallbackLng }: { locale?: 
                 </span>
                 <br />
                 {t("hero.title3")}
-              </motion.h1>
+              </motion.h2>
 
               <motion.p
                 variants={fadeInUp}

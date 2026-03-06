@@ -114,7 +114,7 @@ const MasseterBotoxPage = ({ locale = fallbackLng }: { locale?: string }) => {
               </span>
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="font-[--font-georgia] text-5xl sm:text-6xl lg:text-7xl text-brown mb-6 leading-tight"
             >
@@ -122,7 +122,7 @@ const MasseterBotoxPage = ({ locale = fallbackLng }: { locale?: string }) => {
               <br />
               <span className="text-wine">{t("hero.title2")}</span>
               <br />{t("hero.title3")}
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

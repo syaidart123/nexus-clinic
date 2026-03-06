@@ -73,10 +73,10 @@ export default function BeardLanding({ locale = fallbackLng }: { locale?: string
                     <Sparkles className="w-4 h-4" />
                     {t("hero.badge")}
                   </span>
-                  <h1 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
+                  <h2 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
                     {t("hero.title1")}
                     <span className="text-wine">{t("hero.title2")}</span>
-                  </h1>
+                  </h2>
                   <p className="text-xl text-taupe max-w-lg">
                     {t("hero.desc")}
                   </p>

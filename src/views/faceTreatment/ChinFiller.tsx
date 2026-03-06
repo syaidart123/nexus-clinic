@@ -69,14 +69,14 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="font-georgia text-5xl lg:text-6xl leading-tight"
                   style={{ color: "var(--color-brown)" }}
                 >
                   {t("hero.title")}
                   <span className="text-wine block mt-2">{t("hero.titleHighlight")}</span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p variants={fadeInUp} className="text-lg text-taupe max-w-lg">
                   {t("hero.desc")}

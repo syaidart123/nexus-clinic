@@ -97,7 +97,7 @@ const PicoLaserLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="text-5xl lg:text-6xl xl:text-5xl font-light leading-tight"
                 >
@@ -120,7 +120,7 @@ const PicoLaserLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                   <br />
                   {t("hero.title3")}
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

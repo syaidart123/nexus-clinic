@@ -78,13 +78,13 @@ export default function KeloidLandingPage() {
               </span>
             </motion.div>
             
-            <motion.h1 
+            <motion.h2 
               variants={fadeInUp}
               className="text-5xl md:text-6xl font-bold text-brown mb-6 font-['Georgia'] leading-tight"
             >
               That raised, itchy scar is not 
               <span className="text-wine block">"just a scar."</span>
-            </motion.h1>
+            </motion.h2>
             
             <motion.p 
               variants={fadeInUp}

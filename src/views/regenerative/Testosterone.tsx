@@ -187,7 +187,7 @@ const TestosteroneLanding = ({ locale = fallbackLng }: { locale?: string }) => {
               />
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="text-5xl md:text-7xl font-georgia mb-6 leading-tight"
               style={{ color: "var(--color-brown)" }}
@@ -197,7 +197,7 @@ const TestosteroneLanding = ({ locale = fallbackLng }: { locale?: string }) => {
               <span style={{ color: "var(--color-wine)" }}>
                 {t("hero.title2")}
               </span>
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

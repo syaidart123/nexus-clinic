@@ -73,11 +73,11 @@ const ExosomeLanding = ({
                   </span>
                 </motion.div>
 
-                <h1 className="font-georgia text-5xl lg:text-7xl text-brown leading-tight">
+                <h2 className="font-georgia text-5xl lg:text-7xl text-brown leading-tight">
                   {t("hero.title1")}
                   <span className="block text-wine">{t("hero.title2")}</span>
                   {t("hero.title3")}
-                </h1>
+                </h2>
 
                 <p className="text-lg text-taupe font-inter leading-relaxed">
                   {t("hero.desc")}

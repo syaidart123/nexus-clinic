@@ -115,10 +115,10 @@ const MinoxidilLanding = ({
                 </span>
               </div>
 
-              <h1 className="font-georgia text-5xl md:text-6xl text-brown mb-6 leading-tight">
+              <h2 className="font-georgia text-5xl md:text-6xl text-brown mb-6 leading-tight">
                 {t("hero.title1")}
                 <span className="block text-wine">{t("hero.title2")}</span>
-              </h1>
+              </h2>
 
               <p className="text-lg text-taupe mb-8 max-w-2xl mx-auto font-inter">
                 {t("hero.desc")}

@@ -46,12 +46,19 @@
       "tattooRemoval": "إزالة الوشم ماليزيا"
     },
     "face": {
-      "dermalFiller": "حشوات الجلد",
-      "lipFiller": "حشوات الشفاه",
-      "chinFiller": "حشوات الذقن",
-      "jawlineFiller": "حشوات خط الفك",
-      "noseThread": "رفع الأنف بالخيوط",
-      "masseterBotox": "بوتوكس عضلة المضغ"
+      "botox": "بوتوكس ماليزيا",
+      "cheekFiller": "حشوات الخدود ماليزيا",
+      "chinFiller": "حشوات الذقن ماليزيا",
+      "dermalFiller": "حشوات الجلد ماليزيا",
+      "jawlineFiller": "حشوات خط الفك ماليزيا",
+      "lipFiller": "حشوات الشفاه ماليزيا",
+      "noseFiller": "حشوات الأنف ماليزيا",
+      "noseThread": "رفع الأنف بالخيوط ماليزيا",
+      "skinBooster": "محسن البشرة ماليزيا",
+      "tearTrough": "حشوات الدموع ماليزيا",
+      "underEye": "حشوات تحت العين ماليزيا",
+      "fatFreezing": "تجميد الدهون ماليزيا",
+      "masseterBotox": "بوتوكس عضلة المضغ ماليزيا"
     },
     "hair": {
       "transplant": "زراعة الشعر",

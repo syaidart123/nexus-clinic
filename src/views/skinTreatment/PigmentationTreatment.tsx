@@ -227,7 +227,7 @@ const PigmentationLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
+                <h2 className="font-['Georgia',serif] text-5xl lg:text-6xl text-brown leading-tight">
                   {t("hero.title1")}
                   <span className="block text-wine relative">
                     {t("hero.title2")}
@@ -239,7 +239,7 @@ const PigmentationLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                     />
                   </span>
                   {t("hero.title3")}
-                </h1>
+                </h2>
 
                 <p className="text-xl text-taupe leading-relaxed">
                   {t("hero.desc")}

@@ -127,7 +127,7 @@ const RosaceaTreatmentLanding = () => {
             <span className="text-sm text-brown">Nexus Clinic Kuala Lumpur</span>
           </motion.div>
 
-          <motion.h1
+          <motion.h2
             variants={fadeInUp}
             className="text-5xl md:text-6xl font-[--font-georgia] text-brown mb-6 leading-tight"
           >
@@ -136,7 +136,7 @@ const RosaceaTreatmentLanding = () => {
             Control the flare-ups.
             <br />
             <span className="text-wine">Feel confident</span> in your skin again.
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             variants={fadeInUp}

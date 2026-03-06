@@ -142,13 +142,13 @@ const DermalFillersLanding = ({
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="font-georgia text-4xl lg:text-5xl text-brown leading-tight mb-6"
                 >
                   Dermal Fillers in Kuala Lumpur That Look Like{" "}
                   <span className="text-wine italic">You, Just Rested</span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

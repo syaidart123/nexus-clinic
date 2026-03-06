@@ -146,10 +146,10 @@ const faqs = [
                 <span className="text-sm text-brown">Nexus Clinic Kuala Lumpur</span>
               </div>
               
-              <h1 className="font-[--font-georgia] text-5xl lg:text-5xl text-brown leading-tight">
+              <h2 className="font-[--font-georgia] text-5xl lg:text-5xl text-brown leading-tight">
                 Stretch Mark Removal in Malaysia at 
                 <span className="text-wine block">Nexus Clinic Kuala Lumpur</span>
-              </h1>
+              </h2>
               
               <p className="text-xl text-taupe leading-relaxed">
                 Stretch marks are common. Feeling uncomfortable about them is common too. Let's fade them safely.

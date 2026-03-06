@@ -93,14 +93,14 @@ const PCOSPage = ({ locale = fallbackLng }: { locale?: string }) => {
                 </span>
               </motion.div>
 
-              <motion.h1
+              <motion.h2
                 variants={fadeInUp}
                 className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
                 style={{ color: "#4B3A33", fontFamily: "Georgia, serif" }}
               >
                 {t("hero.title1")}
                 <span className="block text-wine">{t("hero.title2")}</span>
-              </motion.h1>
+              </motion.h2>
 
               <motion.p
                 variants={fadeInUp}

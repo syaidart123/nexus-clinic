@@ -77,12 +77,12 @@ export default function DoctorMonitoredLanding({
                   </span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brown leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brown leading-tight">
                   Lose weight with a plan that's built around
                   <span className="text-wine block">
                     your body, not guesswork
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-lg text-taupe max-w-lg">
                   Doctor monitored weight loss combining medical checks,

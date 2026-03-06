@@ -106,12 +106,12 @@ const MounjaroLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                     </span>
                   </motion.div>
 
-                  <h1 className="text-5xl lg:text-6xl font-serif font-bold text-brown leading-tight">
+                  <h2 className="text-5xl lg:text-6xl font-serif font-bold text-brown leading-tight">
                     Quiet the cravings.
                     <span className="block text-wine">
                       Reset your momentum.
                     </span>
-                  </h1>
+                  </h2>
 
                   <p className="text-lg text-taupe max-w-lg">
                     Mounjaro helps reduce appetite and "food noise" over time.

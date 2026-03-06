@@ -102,10 +102,10 @@ const PShotLanding = () => {
                   Priapus Shot PRP Therapy
                 </span>
               </div>
-              <h1 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
+              <h2 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
                 A stronger erection starts with better blood flow,
                 <span className="text-wine italic"> not more pressure.</span>
-              </h1>
+              </h2>
               <p className="text-lg text-taupe font-inter max-w-lg">
                 If erections feel weaker, don't last, or confidence is dropping,
                 you're not alone. The P-Shot is a PRP based option some men in

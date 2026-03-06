@@ -117,12 +117,12 @@ const HCGWeightLossLanding = ({
               className="max-w-5xl mx-auto"
             >
               <motion.div variants={fadeInUp} className="text-center mb-8">
-                <h1 className="font-georgia text-5xl md:text-6xl lg:text-7xl text-brown mb-6 leading-tight">
+                <h2 className="font-georgia text-5xl md:text-6xl lg:text-7xl text-brown mb-6 leading-tight">
                   HCG Weight Loss Treatment
                   <span className="block text-2xl md:text-3xl text-wine mt-4 font-inter font-light">
                     in Kuala Lumpur, Malaysia
                   </span>
-                </h1>
+                </h2>
 
                 <div className="inline-block bg-cream px-8 py-4 rounded-full border border-taupe/20">
                   <p className="text-brown font-georgia text-xl italic">

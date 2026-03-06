@@ -75,9 +75,9 @@ const HypothyroidLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   <HeartPulse className="w-4 h-4" />
                   {t("hero.badge")}
                 </span>
-                <h1 className="font-['Georgia'] text-4xl lg:text-5xl xl:text-6xl font-bold text-brown leading-tight mb-6">
+                <h2 className="font-['Georgia'] text-4xl lg:text-5xl xl:text-6xl font-bold text-brown leading-tight mb-6">
                   {t("hero.title")}
-                </h1>
+                </h2>
                 <p className="text-xl text-taupe mb-8">
                   {t("hero.desc")}
                 </p>

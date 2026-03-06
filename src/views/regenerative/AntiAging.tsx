@@ -87,10 +87,10 @@ const AntiAgingLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <h1 className="text-5xl lg:text-6xl font-[--font-georgia] leading-tight">
+                <h2 className="text-5xl lg:text-6xl font-[--font-georgia] leading-tight">
                   {t("hero.title1")}{" "}
                   <span className="text-wine">{t("hero.title2")}</span>
-                </h1>
+                </h2>
 
                 <p className="text-xl text-brown/80 leading-relaxed bg-glass backdrop-blur-sm p-6 rounded-2xl">
                   {t("hero.desc")}

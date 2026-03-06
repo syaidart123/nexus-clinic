@@ -120,7 +120,7 @@ const DuromineLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="font-[(--font-georgia)] text-4xl md:text-5xl lg:text-6xl text-brown mb-6 leading-tight"
                 >
@@ -134,7 +134,7 @@ const DuromineLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                       transition={{ delay: 0.5, duration: 0.8 }}
                     />
                   </span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

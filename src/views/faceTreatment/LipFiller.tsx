@@ -123,10 +123,10 @@ const LipFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                 </span>
               </div>
 
-              <h1 className="font-georgia text-5xl md:text-5xl lg:text-6xl leading-tight text-brown">
+              <h2 className="font-georgia text-5xl md:text-5xl lg:text-6xl leading-tight text-brown">
                 Lip Filler in Kuala Lumpur That Still Looks Like{" "}
                 <span className="text-wine">Your Lips</span>
-              </h1>
+              </h2>
 
               <p className="text-lg text-taupe max-w-lg font-inter">
                 Soft volume. Better shape. Cleaner borders. No "duck lips" and

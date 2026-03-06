@@ -68,7 +68,7 @@ const HormonReplaceLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="text-5xl lg:text-6xl font-bold leading-tight"
                   style={{ fontFamily: "Georgia, serif", color: "#4B3A33" }}
@@ -76,7 +76,7 @@ const HormonReplaceLanding = ({ locale = fallbackLng }: { locale?: string }) => 
                   {t("hero.title1")}
                   <span className="block text-wine">{t("hero.title2")}</span>
                   {t("hero.title3")}
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

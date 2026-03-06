@@ -102,14 +102,14 @@ const SimaglutideLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </motion.div>
 
-                <motion.h1
+                <motion.h2
                   variants={fadeInUp}
                   className="text-4xl lg:text-5xl xl:text-6xl font-serif text-brown leading-tight"
                   style={{ fontFamily: "var(--font-georgia)" }}
                 >
                   Quiet the cravings,
                   <span className="block text-wine">not your lifestyle</span>
-                </motion.h1>
+                </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}

@@ -98,10 +98,10 @@ const EczemaLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                     </span>
                   </motion.div>
 
-                  <h1 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-6xl text-brown leading-tight">
+                  <h2 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-6xl text-brown leading-tight">
                     {t("hero.title1")}
                     <span className="block text-wine">{t("hero.title2")}</span>
-                  </h1>
+                  </h2>
 
                   <p className="text-lg text-taupe max-w-lg">
                     {t("hero.desc")}

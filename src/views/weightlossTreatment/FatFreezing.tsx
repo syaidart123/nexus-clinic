@@ -101,11 +101,11 @@ const FatFreezingLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
+                <h2 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
                   Freeze stubborn fat.
                   <br />
                   <span className="text-wine">Shape your body.</span>
-                </h1>
+                </h2>
 
                 <p className="font-inter text-lg text-taupe max-w-lg">
                   Some fat just refuses to move. Target those "last mile" fat

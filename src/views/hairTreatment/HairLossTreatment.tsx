@@ -86,13 +86,13 @@ const HairLossTreatment = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-[--font-georgia] text-5xl lg:text-7xl font-bold leading-tight">
+                <h2 className="font-[--font-georgia] text-5xl lg:text-7xl font-bold leading-tight">
                   {t("hero.title1")}
                   <span className="block text-wine">{t("hero.title2")}</span>
                   <span className="block text-3xl lg:text-4xl text-taupe mt-4">
                     {t("hero.title3")}
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-xl text-brown max-w-lg leading-relaxed">
                   {t("hero.desc")}

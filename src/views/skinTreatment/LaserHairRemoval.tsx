@@ -138,13 +138,13 @@ const LaserHairRemovalLanding = () => {
               </span>
             </motion.div>
             
-            <motion.h1 
+            <motion.h2 
               variants={fadeInUp}
               className="text-5xl md:text-6xl font-bold text-brown mb-6 leading-tight font-['Georgia',serif]"
             >
               Smooth skin is nice.
               <span className="block text-wine">Not thinking about hair every week is even nicer.</span>
-            </motion.h1>
+            </motion.h2>
             
             <motion.p 
               variants={fadeInUp}

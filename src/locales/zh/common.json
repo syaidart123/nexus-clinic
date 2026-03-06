@@ -45,12 +45,19 @@
       "tattooRemoval": "马来西亚洗纹身"
     },
     "face": {
-      "dermalFiller": "真皮填充剂",
-      "lipFiller": "丰唇填充剂",
-      "chinFiller": "下巴填充剂",
-      "jawlineFiller": "下颌线填充剂",
-      "noseThread": "鼻子埋线提升",
-      "masseterBotox": "咬肌肉毒杆菌"
+      "botox": "肉毒杆菌 马来西亚",
+      "cheekFiller": "脸颊填充 马来西亚",
+      "chinFiller": "下巴填充 马来西亚",
+      "dermalFiller": "皮肤填充 马来西亚",
+      "jawlineFiller": "下颌线填充 马来西亚",
+      "lipFiller": "唇部填充 马来西亚",
+      "noseFiller": "鼻子填充 马来西亚",
+      "noseThread": "鼻子线雕 马来西亚",
+      "skinBooster": "皮肤增强剂 马来西亚",
+      "tearTrough": "泪沟填充 马来西亚",
+      "underEye": "眼下填充 马来西亚",
+      "fatFreezing": "冷冻溶脂 马来西亚",
+      "masseterBotox": "咬肌肉毒 马来西亚"
     },
     "hair": {
       "transplant": "植发",

@@ -75,10 +75,10 @@ const FinasterideLanding = ({
                   </span>
                 </div>
 
-                <h1 className="font-[--font-georgia] text-5xl md:text-7xl text-brown leading-tight">
+                <h2 className="font-[--font-georgia] text-5xl md:text-7xl text-brown leading-tight">
                   {t("hero.title1")}
                   <span className="block text-wine">{t("hero.title2")}</span>
-                </h1>
+                </h2>
 
                 <p className="text-xl text-taupe max-w-lg">
                   {t("hero.desc")}

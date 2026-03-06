@@ -16,19 +16,6 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const toSlug = (name: string): string => {
-  return (
-    "/" +
-    name
-      .toLowerCase()
-      .replace(/&/g, "and")
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-")
-      .replace(/-+/g, "-")
-      .trim()
-  );
-};
-
 const navItems = [
   {
     label: "nav.weightLoss",
@@ -37,18 +24,19 @@ const navItems = [
     submenu: {
       weightLoss: {
         items: [
-          { key: "submenu.weightLoss.ozempic", fallback: "Ozempic Malaysia" },
-          { key: "submenu.weightLoss.wegovy", fallback: "Wegovy Malaysia" },
-          { key: "submenu.weightLoss.mounjaro", fallback: "Mounjaro Malaysia" },
-          { key: "submenu.weightLoss.duromine", fallback: "Duromine Malaysia" },
-          { key: "submenu.weightLoss.doctorMonitored", fallback: "Doctor Monitored Malaysia" },
-          { key: "submenu.weightLoss.hcgWeightLoss", fallback: "HCG Weight Loss Malaysia" },
-          { key: "submenu.weightLoss.fatFreezing", fallback: "Fat Freezing Malaysia" },
-          { key: "submenu.weightLoss.coolSculpting", fallback: "CoolSculpting Malaysia" },
-          { key: "submenu.weightLoss.glp1", fallback: "GLP-1 Programme Malaysia" },
-          { key: "submenu.weightLoss.zepbound", fallback: "ZepBound Malaysia" },
-          { key: "submenu.weightLoss.semaglutide", fallback: "Semaglutide Malaysia" },
-          { key: "submenu.weightLoss.tirzepatide", fallback: "Tirzepatide Malaysia" },
+        { key: "submenu.weightLoss.ozempic", fallback: "ozempic-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.wegovy", fallback: "wegovy-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.mounjaro", fallback: "mounjaro-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.duromine", fallback: "duromine-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.doctorMonitored", fallback: "doctor-monitored-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.hcgWeightLoss", fallback: "hcg-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.fatFreezing", fallback: "fat-freezing-malaysia" },
+        { key: "submenu.weightLoss.coolSculpting", fallback: "coolsculpting-malaysia" },
+        { key: "submenu.weightLoss.glp1", fallback: "glp-1-programme-malaysia" },
+        { key: "submenu.weightLoss.zepbound", fallback: "zepbound-weight-loss-malaysia" },
+        { key: "submenu.weightLoss.semaglutide", fallback: "wegovy-weight-loss-malaysia" }, // or create separate
+        { key: "submenu.weightLoss.tirzepatide", fallback: "mounjaro-weight-loss-malaysia" }, // or create separate
+        { key: "submenu.weightLoss.ivDrip", fallback: "iv-drip-weight-loss-malaysia" },
         ],
       },
     },
@@ -62,66 +50,71 @@ const navItems = [
         label: "categories.skin",
         fallback: "Skin",
         items: [
-          { key: "submenu.skin.acneTreatment", fallback: "Acne Treatment KL" },
-          { key: "submenu.skin.acneScar", fallback: "Acne Scar Treatment KL" },
-          { key: "submenu.skin.pigmentation", fallback: "Pigmentation Treatment KL" },
-          { key: "submenu.skin.melasma", fallback: "Melasma Treatment KL" },
-          { key: "submenu.skin.moleRemoval", fallback: "Mole Removal KL" },
-          { key: "submenu.skin.hydrafacial", fallback: "HydraFacial KL" },
-          { key: "submenu.skin.picoLaser", fallback: "Pico Laser KL" },
-          { key: "submenu.skin.darkCircle", fallback: "Dark Eye Circle Treatment KL" },
-          { key: "submenu.skin.whitening", fallback: "Skin Whitening Treatment KL" },
-          { key: "submenu.skin.eczema", fallback: "Eczema Treatment KL" },
-          { key: "submenu.skin.keloid", fallback: "Keloid Treatment Malaysia" },
-          { key: "submenu.skin.rosacea", fallback: "Rosacea Treatment Malaysia" },
-          { key: "submenu.skin.stretchMark", fallback: "Stretch Mark Removal Malaysia" },
-          { key: "submenu.skin.laserHair", fallback: "Laser Hair Removal Malaysia" },
-          { key: "submenu.skin.tattooRemoval", fallback: "Tattoo Removal Malaysia" },
+          { key: "submenu.skin.acneTreatment", fallback: "acne-treatment-malaysia" },
+          { key: "submenu.skin.acneScar", fallback: "acne-scar-treatment-malaysia" },
+          { key: "submenu.skin.pigmentation", fallback: "pigmentation-treatment-malaysia" },
+          { key: "submenu.skin.melasma", fallback: "melasma-treatment-malaysia" },
+          { key: "submenu.skin.moleRemoval", fallback: "mole-removal-malaysia" },
+          { key: "submenu.skin.hydrafacial", fallback: "hydrafacial-malaysia" },
+          { key: "submenu.skin.picoLaser", fallback: "pico-laser-malaysia" },
+          { key: "submenu.skin.darkCircle", fallback: "dark-eye-circle-treatment-malaysia" },
+          { key: "submenu.skin.whitening", fallback: "skin-whitening-treatment-malaysia" },
+          { key: "submenu.skin.eczema", fallback: "eczema-treatment-malaysia" },
+          { key: "submenu.skin.keloid", fallback: "keloid-treatment-malaysia" },
+          { key: "submenu.skin.rosacea", fallback: "rosacea-treatment-malaysia" },
+          { key: "submenu.skin.stretchMark", fallback: "stretch-mark-removal-malaysia" },
+          { key: "submenu.skin.laserHair", fallback: "laser-hair-removal-malaysia" },
+          { key: "submenu.skin.tattooRemoval", fallback: "tattoo-removal-malaysia" },
         ],
       },
       face: {
         label: "categories.face",
         fallback: "Face",
         items: [
-          { key: "submenu.face.dermalFiller", fallback: "Dermal Filler" },
-          { key: "submenu.face.lipFiller", fallback: "Lip Filler" },
-          { key: "submenu.face.chinFiller", fallback: "Chin Filler" },
-          { key: "submenu.face.jawlineFiller", fallback: "Jawline Filler" },
-          { key: "submenu.face.noseThread", fallback: "Nose Thread Lift" },
-          { key: "submenu.face.masseterBotox", fallback: "Masseter Botox" },
+              { key: "submenu.face.botox", fallback: "botox-malaysia" },
+              { key: "submenu.face.cheekFiller", fallback: "cheek-filler-malaysia" },
+              { key: "submenu.face.chinFiller", fallback: "chin-filler-malaysia" },
+              { key: "submenu.face.dermalFiller", fallback: "dermal-filler-malaysia" },
+              { key: "submenu.face.jawlineFiller", fallback: "jawline-filler-malaysia" },
+              { key: "submenu.face.lipFiller", fallback: "lip-filler-malaysia" },
+              { key: "submenu.face.noseFiller", fallback: "nose-filler-malaysia" },
+              { key: "submenu.face.noseThread", fallback: "nose-thread-lift-malaysia" },
+              { key: "submenu.face.skinBooster", fallback: "skin-booster-malaysia" },
+              { key: "submenu.face.tearTrough", fallback: "tear-trough-filler-malaysia" },
+              { key: "submenu.face.underEye", fallback: "under-eye-filler-malaysia" },
         ],
       },
       hair: {
         label: "categories.hair",
         fallback: "Hair",
         items: [
-          { key: "submenu.hair.transplant", fallback: "Hair Transplant" },
-          { key: "submenu.hair.fue", fallback: "Fue Hair Transplant" },
-          { key: "submenu.hair.prp", fallback: "PRP Hair Treatment" },
-          { key: "submenu.hair.lossTreatment", fallback: "Hair Loss Treatment" },
-          { key: "submenu.hair.beard", fallback: "Beard Transplant" },
-          { key: "submenu.hair.mesotherapy", fallback: "Mesotherapy Hair Loss" },
-          { key: "submenu.hair.exosome", fallback: "Exosome Hair Treatment" },
-          { key: "submenu.hair.minoxidil", fallback: "Minoxidil Treatment" },
-          { key: "submenu.hair.finasteride", fallback: "Finasteride" },
+          { key: "submenu.hair.transplant", fallback: "hair-transplant-malaysia" },
+          { key: "submenu.hair.fue", fallback: "fue-hair-transplant-malaysia" },
+          { key: "submenu.hair.prp", fallback: "prp-hair-treatment-malaysia" },
+          { key: "submenu.hair.lossTreatment", fallback: "hair-loss-treatment-malaysia" },
+          { key: "submenu.hair.beard", fallback: "beard-transplant-malaysia" },
+          { key: "submenu.hair.mesotherapy", fallback: "mesotherapy-hair-loss-malaysia" },
+          { key: "submenu.hair.exosome", fallback: "exosome-hair-treatment-malaysia" },
+          { key: "submenu.hair.minoxidil", fallback: "minoxidil-treatment-malaysia" },
+          { key: "submenu.hair.finasteride", fallback: "finasteride-treatment-malaysia" },
         ],
       },
       regenerative: {
         label: "categories.regenerative",
         fallback: "Regenerative",
         items: [
-          { key: "submenu.regenerative.testosterone", fallback: "Testosterone Therapy Malaysia" },
-          { key: "submenu.regenerative.ed", fallback: "ED Treatment Malaysia" },
-          { key: "submenu.regenerative.hormoneReplacement", fallback: "Hormone Replacement Therapy Malaysia" },
-          { key: "submenu.regenerative.pcos", fallback: "PCOS Treatment Malaysia" },
-          { key: "submenu.regenerative.hypothyroidism", fallback: "Hypothyroidism Treatment Malaysia" },
-          { key: "submenu.regenerative.stemCell", fallback: "Stem Cell Therapy Malaysia" },
-          { key: "submenu.regenerative.antiAging", fallback: "Anti-Aging Therapy Malaysia" },
-          { key: "submenu.regenerative.hormoneTest", fallback: "Hormone Test Malaysia" },
-          { key: "submenu.regenerative.menopause", fallback: "Menopause Hormone Replacement Malaysia" },
-          { key: "submenu.regenerative.pShot", fallback: "P Shot Malaysia" },
-          { key: "submenu.regenerative.oShot", fallback: "O Shot Malaysia" },
-          { key: "submenu.regenerative.shockwave", fallback: "Shockwave Therapy Malaysia" },
+          { key: "submenu.regenerative.testosterone", fallback: "testosterone-therapy-malaysia" },
+          { key: "submenu.regenerative.ed", fallback: "ed-treatment-malaysia" },
+          { key: "submenu.regenerative.hormoneReplacement", fallback: "hormone-replacement-therapy-malaysia" },
+          { key: "submenu.regenerative.pcos", fallback: "pcos-treatment-malaysia" },
+          { key: "submenu.regenerative.hypothyroidism", fallback: "hypothyroidism-treatment-malaysia" },
+          { key: "submenu.regenerative.stemCell", fallback: "stem-cell-therapy-malaysia" },
+          { key: "submenu.regenerative.antiAging", fallback: "anti-aging-therapy-malaysia" },
+          { key: "submenu.regenerative.hormoneTest", fallback: "hormone-test-malaysia" },
+          { key: "submenu.regenerative.menopause", fallback: "menopause-hormone-replacement-malaysia" },
+          { key: "submenu.regenerative.pShot", fallback: "p-shot-malaysia" },
+          { key: "submenu.regenerative.oShot", fallback: "o-shot-malaysia" },
+          { key: "submenu.regenerative.shockwave", fallback: "shockwave-therapy-malaysia" },
         ],
       },
     },
@@ -154,10 +147,9 @@ const buildSearchIndex = (getText: (key: string, fallback: string) => string): S
     if (item.submenu) {
       Object.entries(item.submenu).forEach(([category, categoryData]: [string, any]) => {
         categoryData.items.forEach((subItem: { key: string; fallback: string }) => {
-          const englishText = subItem.fallback;
           results.push({
             label: getText(subItem.key, subItem.fallback),
-            href: englishText ? toSlug(englishText) : "#",
+            href: `/${category}/${subItem.fallback}/`,
             category: category,
           });
         });
@@ -783,7 +775,7 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                         (subItem: { key: string; fallback: string }, idx: number) => (
                                           <li key={idx}>
                                             <motion.a
-                                              href={getNavHref(toSlug(subItem.fallback))}
+                                              href={getNavHref(`/${category}/${subItem.fallback}/`)}
                                               whileHover={{ x: 4 }}
                                               className="group/item flex items-center gap-2 text-taupe hover:text-wine text-sm py-1.5 transition-all duration-200"
                                             >
@@ -1094,9 +1086,7 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                             (subItem: { key: string; fallback: string }, idx: number) => (
                                               <motion.a
                                                 key={idx}
-                                                href={getNavHref(
-                                                  toSlug(getText(subItem.key, subItem.fallback)),
-                                                )}
+                                                href={getNavHref(`/${category}/${subItem.fallback}/`)}
                                                 initial={{ opacity: 0, x: -10 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{

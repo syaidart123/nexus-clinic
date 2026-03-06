@@ -100,14 +100,14 @@ const SkinWhiteningLanding = ({ locale = fallbackLng }: { locale?: string }) => 
               </motion.div>
 
               {/* Main Heading */}
-              <motion.h1
+              <motion.h2
                 variants={fadeInUp}
                 className="text-4xl sm:text-5xl lg:text-7xl font-['Georgia',serif] text-center mb-6"
               >
                 <span className="text-brown">{t("hero.title1")}</span>
                 <br />
                 <span className="text-wine italic">{t("hero.title2")}</span>
-              </motion.h1>
+              </motion.h2>
 
               {/* Supporting Text */}
               <motion.p

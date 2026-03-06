@@ -76,7 +76,7 @@ const HairTransplantLanding = ({ locale = fallbackLng }: { locale?: string }) =>
                 </span>
               </motion.div>
 
-              <motion.h1
+              <motion.h2
                 variants={fadeInUp}
                 className="font-['Georgia',serif] text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
               >
@@ -85,7 +85,7 @@ const HairTransplantLanding = ({ locale = fallbackLng }: { locale?: string }) =>
                 <span className="bg-linear-to-r from-wine to-rose bg-clip-text text-transparent">
                   {t("hero.title2")}
                 </span>
-              </motion.h1>
+              </motion.h2>
 
               <motion.p
                 variants={fadeInUp}

@@ -45,12 +45,18 @@
       "tattooRemoval": "Tattoo Removal Malaysia"
     },
     "face": {
-      "dermalFiller": "Dermal Filler",
-      "lipFiller": "Lip Filler",
-      "chinFiller": "Chin Filler",
-      "jawlineFiller": "Jawline Filler",
-      "noseThread": "Nose Thread Lift",
-      "masseterBotox": "Masseter Botox"
+      "botox": "Botox Malaysia",
+      "cheekFiller": "Cheek Filler Malaysia",
+      "chinFiller": "Chin Filler Malaysia",
+      "dermalFiller": "Dermal Filler Malaysia",
+      "jawlineFiller": "Jawline Filler Malaysia",
+      "lipFiller": "Lip Filler Malaysia",
+      "noseFiller": "Nose Filler Malaysia",
+      "noseThread": "Nose Thread Lift Malaysia",
+      "skinBooster": "Skin Booster Malaysia",
+      "tearTrough": "Tear Trough Filler Malaysia",
+      "underEye": "Under Eye Filler Malaysia",
+      "fatFreezing": "Fat Freezing Malaysia"
     },
     "hair": {
       "transplant": "Hair Transplant",

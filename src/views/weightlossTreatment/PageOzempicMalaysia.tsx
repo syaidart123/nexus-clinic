@@ -90,11 +90,11 @@ const PageOzempicMalaysia = ({ locale = fallbackLng }: { locale?: string }) => {
                 </span>
               </div>
 
-              <h1 className="font-georgia text-5xl md:text-6xl text-brown leading-tight">
+              <h2 className="font-georgia text-5xl md:text-6xl text-brown leading-tight">
                 Lose weight with
                 <span className="text-wine block">medical support,</span>
                 not guesswork
-              </h1>
+              </h2>
 
               <p className="text-lg text-taupe font-inter leading-relaxed max-w-xl">
                 Ozempic can reduce appetite and support steady weight loss for

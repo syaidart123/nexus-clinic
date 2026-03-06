@@ -90,14 +90,14 @@ const GLP1LandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
               </span>
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="font-['Georgia'] text-5xl md:text-7xl font-bold text-brown mb-6 leading-tight"
             >
               Quiet the cravings,
               <br />
               <span className="text-wine">not your lifestyle</span>
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

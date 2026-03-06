@@ -75,14 +75,14 @@ const FUEHairTransplant = ({ locale = fallbackLng }: { locale?: string }) => {
               </span>
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="font-['Georgia',serif] text-5xl md:text-7xl lg:text-8xl text-brown mb-8 leading-tight"
             >
               {t("hero.title1")}
               <span className="block text-wine">{t("hero.title2")}</span>
               {t("hero.title3")}
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

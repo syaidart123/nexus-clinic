@@ -112,10 +112,10 @@ const OShotLanding = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brown leading-tight font-georgia">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brown leading-tight font-georgia">
                 O-Shot in Malaysia
                 <span className="block text-wine mt-2">PRP "Orgasm Shot"</span>
-              </h1>
+              </h2>
 
               <p className="text-xl leading-relaxed">
                 Feeling dry, less sensitive, or "not the same" down there? You

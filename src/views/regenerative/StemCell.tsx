@@ -109,7 +109,7 @@ const StemCellLanding = ({ locale = fallbackLng }: { locale?: string }) => {
               </span>
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="font-serif text-5xl md:text-7xl font-bold mb-6"
               style={{ color: "var(--color-brown)" }}
@@ -120,7 +120,7 @@ const StemCellLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                 regenerative care
               </span>{" "}
               can feel like hope.
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

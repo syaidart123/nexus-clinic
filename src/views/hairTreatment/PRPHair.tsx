@@ -86,12 +86,12 @@ const PRPLandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
+                <h2 className="font-georgia text-5xl lg:text-6xl text-brown leading-tight">
                   {t("hero.title1")}
                   <span className="block text-wine mt-2">
                     {t("hero.title2")}
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-lg text-taupe font-inter max-w-lg">
                   {t("hero.desc")}

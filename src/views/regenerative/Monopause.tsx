@@ -153,12 +153,12 @@ const MonopauseLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-['Georgia'] text-5xl lg:text-6xl text-brown leading-tight">
+                <h2 className="font-['Georgia'] text-5xl lg:text-6xl text-brown leading-tight">
                   {t("hero.title1")}
                   <span className="text-wine block mt-2">
                     {t("hero.title2")}
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-lg text-taupe leading-relaxed bg-white/50 backdrop-blur-sm p-6 rounded-2xl">
                   {t("hero.desc")}

@@ -80,13 +80,13 @@ const HydraFacialLandingPage = ({ locale = fallbackLng }: { locale?: string }) =
                     {t("hero.badge")}
                   </span>
 
-                  <h1 className="font-georgia text-5xl lg:text-5xl text-brown leading-tight">
+                  <h2 className="font-georgia text-5xl lg:text-5xl text-brown leading-tight">
                     {t("hero.title1")}
                     <span className="text-wine">
                       {" "}
                       {t("hero.title2")}
                     </span>
-                  </h1>
+                  </h2>
 
                   <p className="text-lg text-taupe font-inter leading-relaxed">
                     {t("hero.desc")}

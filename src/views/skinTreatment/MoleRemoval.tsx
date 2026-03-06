@@ -161,11 +161,11 @@ const MoleRemovalLanding = ({ locale = fallbackLng }: { locale?: string }) => {
                   </span>
                 </div>
 
-                <h1 className="font-georgia text-4xl md:text-5xl lg:text-5xl leading-tight text-brown">
+                <h2 className="font-georgia text-4xl md:text-5xl lg:text-5xl leading-tight text-brown">
                   {t("hero.title1")}{" "}
                   <span className="text-wine italic">{t("hero.title2")}</span>{" "}
                   {t("hero.title3")}
-                </h1>
+                </h2>
 
                 <p className="text-lg text-taupe font-light leading-relaxed max-w-lg">
                   {t("hero.desc")}

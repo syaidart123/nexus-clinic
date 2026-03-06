@@ -100,10 +100,10 @@ const NoseThreadLiftLanding = ({ locale = fallbackLng }: { locale?: string }) =>
                       {t("hero.badge")}
                     </span>
                   </div>
-                  <h1 className="font-['Georgia',serif] text-5xl md:text-6xl lg:text-7xl text-brown leading-tight">
+                  <h2 className="font-['Georgia',serif] text-5xl md:text-6xl lg:text-7xl text-brown leading-tight">
                     {t("hero.title")}
                     <span className="block text-wine">{t("hero.titleHighlight")}</span>
-                  </h1>
+                  </h2>
                   <p className="text-xl text-taupe max-w-lg">
                     {t("hero.desc")}
                   </p>

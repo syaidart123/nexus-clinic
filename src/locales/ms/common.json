@@ -45,12 +45,19 @@
       "tattooRemoval": "Penghilangan Tatu Malaysia"
     },
     "face": {
-      "dermalFiller": "Filler Dermal",
-      "lipFiller": "Filler Bibir",
-      "chinFiller": "Filler Dagu",
-      "jawlineFiller": "Filler Garis Rahang",
-      "noseThread": "Thread Lift Hidung",
-      "masseterBotox": "Botox Masseter"
+      "botox": "Botox Malaysia",
+      "cheekFiller": "Pengisi Pipi Malaysia",
+      "chinFiller": "Pengisi Dagu Malaysia",
+      "dermalFiller": "Pengisi Kulit Malaysia",
+      "jawlineFiller": "Pengisi Garis Rahang Malaysia",
+      "lipFiller": "Pengisi Bibir Malaysia",
+      "noseFiller": "Pengisi Hidung Malaysia",
+      "noseThread": "Angkat Hidung dengan Benang Malaysia",
+      "skinBooster": "Skin Booster Malaysia",
+      "tearTrough": "Pengisi Tear Trough Malaysia",
+      "underEye": "Pengisi Bawah Mata Malaysia",
+      "fatFreezing": "Pembekuan Lemak Malaysia",
+      "masseterBotox": "Botox Masseter Malaysia"
     },
     "hair": {
       "transplant": "Transplantasi Rambut",

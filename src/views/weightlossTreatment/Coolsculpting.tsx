@@ -235,7 +235,7 @@ const CoolSculptingLanding = ({
                   </span>
                 </div>
 
-                <h1
+                <h2
                   className="text-4xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
                   style={{
                     color: "var(--color-brown)",
@@ -247,7 +247,7 @@ const CoolSculptingLanding = ({
                   <span style={{ color: "var(--color-wine)" }}>
                     Reveal Your Contour
                   </span>
-                </h1>
+                </h2>
 
                 <p
                   className="text-md xl:text-lg"

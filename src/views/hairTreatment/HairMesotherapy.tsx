@@ -81,13 +81,13 @@ const HairMesotherapyLanding = ({
               </span>
             </motion.div>
 
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="text-5xl sm:text-6xl lg:text-7xl font-['Georgia',serif] text-brown mb-6 leading-tight"
             >
               {t("hero.title1")}
               <span className="block text-wine">{t("hero.title2")}</span>
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}

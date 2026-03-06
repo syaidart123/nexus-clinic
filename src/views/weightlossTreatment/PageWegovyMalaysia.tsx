@@ -136,12 +136,12 @@ export default function PageWegovyMalaysia({
                   </span>
                 </div>
 
-                <h1 className="font-['Georgia',serif] text-5xl lg:text-5xl text-brown leading-tight">
+                <h2 className="font-['Georgia',serif] text-5xl lg:text-5xl text-brown leading-tight">
                   Feel lighter, eat with control, and lose weight safely with
                   <span className="text-wine text-4xl block mt-2">
                     Wegovy in Kuala Lumpur
                   </span>
-                </h1>
+                </h2>
 
                 <p className="text-taupe font-inter text-lg leading-relaxed max-w-lg">
                   If dieting feels like a daily fight, you are not alone. Wegovy

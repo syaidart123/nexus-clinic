@@ -196,7 +196,7 @@ export default function AcneLandingPage({ locale = fallbackLng }: { locale?: str
             className="mb-8 items-center gap-3 hidden md:flex"
           ></motion.div>
 
-          {/* H1 */}
+          {/* h2 */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -204,7 +204,7 @@ export default function AcneLandingPage({ locale = fallbackLng }: { locale?: str
             viewport={{ once: true }}
             className="max-w-5xl px-24 md:px-0"
           >
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
               className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] font-normal mb-6"
               style={{ color: "var(--color-brown)" }}
@@ -214,7 +214,7 @@ export default function AcneLandingPage({ locale = fallbackLng }: { locale?: str
                 {t("hero.titleHighlight")}
               </span>{" "}
               {t("hero.title2")}
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               variants={fadeInUp}
