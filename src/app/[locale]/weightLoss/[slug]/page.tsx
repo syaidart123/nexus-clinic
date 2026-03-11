@@ -13,11 +13,13 @@ import Wegovy from "@/src/views/weightlossTreatment/PageWegovyMalaysia";
 import DoctorMonitored from "@/src/views/weightlossTreatment/DoctorMonitored";
 import HCGWeightLoss from "@/src/views/weightlossTreatment/HCG";
 import Duromine from "@/src/views/weightlossTreatment/Duromine";
-import GLP from "@/src/views/weightlossTreatment/GLP";
 import Zepbound from "@/src/views/weightlossTreatment/ZepBound";
 // import IVDrip from "@/src/views/weightlossTreatment/IVDrip";
 import Default from "@/src/views/weightlossTreatment/Default";
 import PageOzempicMalaysia from "@/src/views/weightlossTreatment/PageOzempicMalaysia";
+import GLP1LandingPage from "@/src/views/weightlossTreatment/GLP";
+import SimaglutideLanding from "@/src/views/weightlossTreatment/SimaglutideInjection";
+import TirzepatideLanding from "@/src/views/weightlossTreatment/Tirzepatide";
 
 const components: Record<string, React.ComponentType<{ locale: string }>> = {
   CoolSculpting,
@@ -28,9 +30,11 @@ const components: Record<string, React.ComponentType<{ locale: string }>> = {
   DoctorMonitored,
   HCGWeightLoss,
   Duromine,
-  GLP,
   Zepbound,
   PageOzempicMalaysia,
+  GLP1LandingPage,
+  SimaglutideLanding,
+  TirzepatideLanding,
   //   IVDrip,
 };
 
