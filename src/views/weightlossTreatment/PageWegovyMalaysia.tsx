@@ -767,7 +767,7 @@ export default function PageWegovyMalaysia({
         </motion.section>
 
         {/* Competitor Analysis Section */}
-        <motion.section
+        {/* <motion.section
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -852,7 +852,7 @@ export default function PageWegovyMalaysia({
               </div>
             </motion.div>
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* FAQ Section */}
         <FAQ data={faqs} />

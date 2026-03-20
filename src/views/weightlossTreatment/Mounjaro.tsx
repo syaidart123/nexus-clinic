@@ -84,7 +84,6 @@ const MounjaroLanding = ({ locale = fallbackLng }: { locale?: string }) => {
 
           {/* Hero section content exactly as in PDF */}
           <div className="mt-12 space-y-6">
-            <h2 className="text-3xl text-wine font-georgia">Hero section</h2>
             <p className="text-2xl text-brown font-georgia italic">
               Quiet the cravings. Reset your momentum.
             </p>
@@ -826,7 +825,7 @@ const MounjaroLanding = ({ locale = fallbackLng }: { locale?: string }) => {
       </motion.section>
 
       {/* What top competitors in Malaysia are doing - SEMUA KATA LENGKAP */}
-      <motion.section
+      {/* <motion.section
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -891,7 +890,7 @@ const MounjaroLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </div>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* FAQ Section - SEMUA PERTANYAAN DAN JAWABAN LENGKAP */}
       <motion.section

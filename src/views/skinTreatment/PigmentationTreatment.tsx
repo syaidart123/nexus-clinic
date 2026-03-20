@@ -970,7 +970,7 @@ const PigmentationLanding = ({ locale = fallbackLng }: { locale?: string }) => {
       </section>
 
       {/* Competitor Analysis Section */}
-      <section className="py-24 bg-light">
+      {/* <section className="py-24 bg-light">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -1104,7 +1104,7 @@ const PigmentationLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </motion.p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-24 bg-cream">

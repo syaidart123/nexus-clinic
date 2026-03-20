@@ -1249,7 +1249,7 @@ const AcneScarLanding = ({ locale = fallbackLng }: { locale?: string }) => {
       </motion.section>
 
       {/* Competitor Analysis */}
-      <motion.section
+      {/* <motion.section
         variants={staggerContainer}
         initial="initial"
         whileInView="whileInView"
@@ -1336,7 +1336,7 @@ const AcneScarLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </p>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* FAQ Section */}
       <motion.section

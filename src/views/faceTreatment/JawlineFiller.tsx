@@ -928,7 +928,7 @@ const JawlineFillerLanding = ({
       </section>
 
       {/* Competitor Snapshot */}
-      <section className="py-20 px-4 bg-cream/30">
+      {/* <section className="py-20 px-4 bg-cream/30">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -1014,7 +1014,7 @@ const JawlineFillerLanding = ({
             </p>
           </motion.div>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Why Choose Nexus */}
       <section className="py-20 px-4 bg-light">

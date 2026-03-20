@@ -194,7 +194,7 @@ const GLP1LandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
       </section>
 
       {/* Market Context Section - All content preserved exactly */}
-      <section className="py-20 bg-cream">
+      {/* <section className="py-20 bg-cream">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <motion.div
             variants={fadeInUp}
@@ -308,7 +308,7 @@ const GLP1LandingPage = ({ locale = fallbackLng }: { locale?: string }) => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* What is GLP-1 Section - All content preserved exactly with image */}
       <section className="py-20 bg-light">

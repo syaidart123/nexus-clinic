@@ -182,7 +182,7 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
         </motion.div>
       </section>
 
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-cream border-b border-taupe/20">
+      {/* <section className="py-16 px-4 md:px-8 lg:px-16 bg-cream border-b border-taupe/20">
         <motion.div
           className="max-w-7xl mx-auto"
           initial="hidden"
@@ -203,9 +203,7 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </p>
           </motion.div>
 
-          {/* Three Groups */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Group 1: Clinic directories */}
             <motion.div
               variants={scaleIn}
               className="bg-white p-6 rounded-xl shadow-md"
@@ -240,7 +238,6 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
               </ul>
             </motion.div>
 
-            {/* Group 2: Single-clinic pages */}
             <motion.div
               variants={scaleIn}
               className="bg-white p-6 rounded-xl shadow-md"
@@ -268,7 +265,6 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
               </ul>
             </motion.div>
 
-            {/* Group 3: General filler pages */}
             <motion.div
               variants={scaleIn}
               className="bg-white p-6 rounded-xl shadow-md"
@@ -292,7 +288,6 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </motion.div>
           </div>
 
-          {/* What competitors miss - Nexus Advantage */}
           <motion.div
             variants={fadeInUp}
             className="bg-white p-8 rounded-2xl shadow-lg border-2 border-wine/20"
@@ -364,7 +359,7 @@ const ChinFillerLanding = ({ locale = fallbackLng }: { locale?: string }) => {
             </div>
           </motion.div>
         </motion.div>
-      </section>
+      </section> */}
 
       <section className="relative overflow-hidden bg-linear-to-b from-cream to-light py-20 px-4 md:px-8 lg:px-16">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] opacity-5 bg-cover bg-center" />
