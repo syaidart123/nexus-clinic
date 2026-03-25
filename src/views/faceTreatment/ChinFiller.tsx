@@ -17,6 +17,7 @@ import {
   scaleIn,
   fadeInUp,
 } from "../../lib/animations";
+import SectionBeforeAfter from "@/src/components/BeforeAfterCustomize";
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -130,10 +131,28 @@ const ChinFillerLanding = () => {
     },
   ];
 
+  const transformations = [
+    {
+      id: 1,
+      before: "/images/B&A-skin/B&A-pigmentation-treatment1.webp",
+      after: "/images/B&A-skin/B&A-pigmentation-treatment1.webp",
+    },
+    {
+      id: 2,
+      before: "/images/B&A-skin/B&A-pigmentation-treatment2.webp",
+      after: "/images/B&A-skin/B&A-pigmentation-treatment2.webp",
+    },
+    {
+      id: 3,
+      before: "/images/B&A-skin/B&A-pigmentation-treatment3.webp",
+      after: "/images/B&A-skin/B&A-pigmentation-treatment3.webp",
+    },
+  ];
+
   return (
-    <div className="bg-[#faf6f2] overflow-x-hidden font-sans">
+    <div className="bg-light overflow-x-hidden font-sans">
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
-      <section className="relative bg-[#fdf4ed] pt-14 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
+      <section className="relative bg-cream pt-14 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-[#8b2635]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <motion.div
@@ -144,9 +163,9 @@ const ChinFillerLanding = () => {
             className="grid lg:grid-cols-2 gap-10 items-center"
           >
             <motion.div variants={fadeInUp}>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3d2b1f] leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#8b2635] leading-tight tracking-tight">
                 Best Chin Filler in Malaysia{" "}
-                <span className="text-[#8b2635]">
+                <span className="text-[#3d2b1f]">
                   Instant Results Without Surgery
                 </span>{" "}
                 at Nexus Clinic Kuala Lumpur
@@ -182,7 +201,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── TREATMENT OVERVIEW ────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#faf6f2]">
+      <section className="py-16 sm:py-20 bg-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <motion.div
             initial="hidden"
@@ -261,7 +280,7 @@ const ChinFillerLanding = () => {
                     ],
                   ].map(([label, value]) => (
                     <tr key={label}>
-                      <td className="px-5 py-4 font-semibold bg-[#fdf4ed]/60 w-2/5 align-top text-[#3d2b1f]">
+                      <td className="px-5 py-4 font-semibold bg-cream/60 w-2/5 align-top text-[#3d2b1f]">
                         {label}
                       </td>
                       <td className="px-5 py-4 text-[#5a3e2b]">{value}</td>
@@ -280,7 +299,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── SIDE PROFILE PROBLEM ──────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#fdf4ed]">
+      <section className="py-16 sm:py-20 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <motion.div
             variants={staggerContainer}
@@ -343,7 +362,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── PATIENTS WHO BENEFIT ──────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#faf6f2]">
+      <section className="py-16 sm:py-20 bg-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <motion.div
             variants={fadeInUp}
@@ -406,7 +425,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── NEXUS CLINIC DIFFERENCE ───────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#fdf4ed]">
+      <section className="py-16 sm:py-20 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <motion.div
             variants={staggerContainer}
@@ -526,7 +545,7 @@ const ChinFillerLanding = () => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-[#faf6f2]">
+      <section className="py-16 sm:py-20 bg-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-8xl">
           <motion.div
             variants={fadeInUp}
@@ -590,7 +609,7 @@ const ChinFillerLanding = () => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-[#fdf4ed]">
+      <section className="py-16 sm:py-20 bg-cream">
         <div className="container max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10">
             <motion.div
@@ -629,6 +648,12 @@ const ChinFillerLanding = () => {
               <button className="mt-4 text-[#8b2635] underline text-sm font-medium">
                 See Results for Yourself | Book Your Consultation Today
               </button>
+
+              <img
+                src="/images/blog-f.png"
+                alt="result chin filler"
+                className="my-4 rounded-lg"
+              />
             </motion.div>
 
             <motion.div
@@ -708,7 +733,7 @@ const ChinFillerLanding = () => {
                     ].map(([aspect, ...vals]) => (
                       <tr
                         key={aspect}
-                        className="hover:bg-[#fdf4ed]/40 transition-colors"
+                        className="hover:bg-cream/40 transition-colors"
                       >
                         <td className="p-3 font-semibold text-[#3d2b1f] align-top">
                           {aspect}
@@ -742,7 +767,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── ADVANTAGES & COST PRICING TABLE ──────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#faf6f2]">
+      <section className="py-16 sm:py-20 bg-light">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Advantages & Limitations */}
@@ -804,6 +829,33 @@ const ChinFillerLanding = () => {
                   several days
                 </li>
               </ul>
+
+              <h3 className="text-xl font-bold text-[#3d2b1f] mt-8">
+                Chin Filler Aftercare Instructions
+              </h3>
+              <ul className="grid sm:grid-cols-2 gap-2 text-sm mt-3 bg-cream p-4 rounded-xl">
+                {[
+                  "✓ Avoid pressing, rubbing or massaging the chin area for at least 48 hours",
+                  "✓ Avoid sleeping face-down for the first two nights",
+                  "✓ Skip intense exercise for the first 24 hours",
+                  "✓ Stay away from saunas, steam rooms and prolonged heat exposure for 48 hours",
+                  "✓ Avoid alcohol for the first 24 hours to reduce bruising and swelling risk",
+                  "✓ Do not book facial massages or skin treatments for at least two weeks after treatment",
+                  "✓ Give the filler 5 to 7 days to fully settle before assessing the final result",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-[#5a3e2b] text-xs sm:text-sm list-none"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-sm text-[#6b4f3a]">
+                Most patients see no visible signs of treatment within 24 to 48
+                hours. The shape refines slightly over the first week as any
+                mild swelling resolves.
+              </p>
             </div>
 
             {/* PRICE TABLE */}
@@ -862,7 +914,7 @@ const ChinFillerLanding = () => {
                     ].map(([brand, vol, price], i) => (
                       <tr
                         key={i}
-                        className={i % 2 === 0 ? "bg-[#fdf4ed]/30" : "bg-white"}
+                        className={i % 2 === 0 ? "bg-cream/30" : "bg-white"}
                       >
                         <td className="px-4 py-3 text-[#3d2b1f] font-medium">
                           {brand}
@@ -921,34 +973,10 @@ const ChinFillerLanding = () => {
                 Get Your Personalised Price | Book a Free Consultation at Nexus
                 Clinic KL
               </button>
-
-              <h3 className="text-xl font-bold text-[#3d2b1f] mt-8">
-                Chin Filler Aftercare Instructions
-              </h3>
-              <ul className="grid sm:grid-cols-2 gap-2 text-sm mt-3 bg-[#fdf4ed] p-4 rounded-xl">
-                {[
-                  "✓ Avoid pressing, rubbing or massaging the chin area for at least 48 hours",
-                  "✓ Avoid sleeping face-down for the first two nights",
-                  "✓ Skip intense exercise for the first 24 hours",
-                  "✓ Stay away from saunas, steam rooms and prolonged heat exposure for 48 hours",
-                  "✓ Avoid alcohol for the first 24 hours to reduce bruising and swelling risk",
-                  "✓ Do not book facial massages or skin treatments for at least two weeks after treatment",
-                  "✓ Give the filler 5 to 7 days to fully settle before assessing the final result",
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-[#5a3e2b] text-xs sm:text-sm list-none"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 text-sm text-[#6b4f3a]">
-                Most patients see no visible signs of treatment within 24 to 48
-                hours. The shape refines slightly over the first week as any
-                mild swelling resolves.
-              </p>
             </div>
+          </div>
+          <div className="my-4 bg-light!">
+            <SectionBeforeAfter transformations={transformations} />
           </div>
 
           {/* Longevity & Side Effects */}
@@ -1045,7 +1073,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#fdf4ed]">
+      <section className="py-16 sm:py-20 bg-cream">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-[#3d2b1f]">
             Frequently Asked Questions About Chin Filler in Malaysia
@@ -1105,7 +1133,7 @@ const ChinFillerLanding = () => {
       </section>
 
       {/* ── FINAL CTA ─────────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-[#faf6f2]">
+      <section className="py-16 sm:py-20 bg-light">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center bg-white p-8 sm:p-10 rounded-2xl shadow-lg">
             <h3 className="text-2xl sm:text-3xl font-bold text-[#3d2b1f]">
