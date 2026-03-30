@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect,useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -17,6 +17,8 @@ import {
 import { useTranslation } from "react-i18next";
 
 const navItems = [
+  { label: "nav.gallery", fallback: "Gallery", href: "#gallery" },
+  { label: "nav.doctors", fallback: "Doctors", href: "#doctors" },
   {
     label: "nav.weightLoss",
     fallback: "Weight Loss",
@@ -24,19 +26,58 @@ const navItems = [
     submenu: {
       weightLoss: {
         items: [
-        { key: "submenu.weightLoss.ozempic", fallback: "ozempic-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.wegovy", fallback: "wegovy-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.mounjaro", fallback: "mounjaro-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.duromine", fallback: "duromine-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.doctorMonitored", fallback: "doctor-monitored-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.hcgWeightLoss", fallback: "hcg-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.fatFreezing", fallback: "fat-freezing-malaysia" },
-        { key: "submenu.weightLoss.coolSculpting", fallback: "coolsculpting-malaysia" },
-        { key: "submenu.weightLoss.glp1", fallback: "glp-1-programme-malaysia" },
-        { key: "submenu.weightLoss.zepbound", fallback: "zepbound-weight-loss-malaysia" },
-        { key: "submenu.weightLoss.semaglutide", fallback: "wegovy-weight-loss-malaysia" }, // or create separate
-        { key: "submenu.weightLoss.tirzepatide", fallback: "mounjaro-weight-loss-malaysia" }, // or create separate
-        { key: "submenu.weightLoss.ivDrip", fallback: "iv-drip-weight-loss-malaysia" },
+          {
+            key: "submenu.weightLoss.ozempic",
+            fallback: "ozempic-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.wegovy",
+            fallback: "wegovy-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.mounjaro",
+            fallback: "mounjaro-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.duromine",
+            fallback: "duromine-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.doctorMonitored",
+            fallback: "doctor-monitored-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.hcgWeightLoss",
+            fallback: "hcg-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.fatFreezing",
+            fallback: "fat-freezing-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.coolSculpting",
+            fallback: "coolsculpting-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.glp1",
+            fallback: "glp-1-programme-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.zepbound",
+            fallback: "zepbound-weight-loss-malaysia",
+          },
+          {
+            key: "submenu.weightLoss.semaglutide",
+            fallback: "wegovy-weight-loss-malaysia",
+          }, // or create separate
+          {
+            key: "submenu.weightLoss.tirzepatide",
+            fallback: "mounjaro-weight-loss-malaysia",
+          }, // or create separate
+          {
+            key: "submenu.weightLoss.ivDrip",
+            fallback: "iv-drip-weight-loss-malaysia",
+          },
         ],
       },
     },
@@ -50,71 +91,170 @@ const navItems = [
         label: "categories.skin",
         fallback: "Skin",
         items: [
-          { key: "submenu.skin.acneTreatment", fallback: "acne-treatment-malaysia" },
-          { key: "submenu.skin.acneScar", fallback: "acne-scar-treatment-malaysia" },
-          { key: "submenu.skin.pigmentation", fallback: "pigmentation-treatment-malaysia" },
-          { key: "submenu.skin.melasma", fallback: "melasma-treatment-malaysia" },
-          { key: "submenu.skin.moleRemoval", fallback: "mole-removal-malaysia" },
+          {
+            key: "submenu.skin.acneTreatment",
+            fallback: "acne-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.acneScar",
+            fallback: "acne-scar-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.pigmentation",
+            fallback: "pigmentation-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.melasma",
+            fallback: "melasma-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.moleRemoval",
+            fallback: "mole-removal-malaysia",
+          },
           { key: "submenu.skin.hydrafacial", fallback: "hydrafacial-malaysia" },
           { key: "submenu.skin.picoLaser", fallback: "pico-laser-malaysia" },
-          { key: "submenu.skin.darkCircle", fallback: "dark-eye-circle-treatment-malaysia" },
-          { key: "submenu.skin.whitening", fallback: "skin-whitening-treatment-malaysia" },
+          {
+            key: "submenu.skin.darkCircle",
+            fallback: "dark-eye-circle-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.whitening",
+            fallback: "skin-whitening-treatment-malaysia",
+          },
           { key: "submenu.skin.eczema", fallback: "eczema-treatment-malaysia" },
           { key: "submenu.skin.keloid", fallback: "keloid-treatment-malaysia" },
-          { key: "submenu.skin.rosacea", fallback: "rosacea-treatment-malaysia" },
-          { key: "submenu.skin.stretchMark", fallback: "stretch-mark-removal-malaysia" },
-          { key: "submenu.skin.laserHair", fallback: "laser-hair-removal-malaysia" },
-          { key: "submenu.skin.tattooRemoval", fallback: "tattoo-removal-malaysia" },
+          {
+            key: "submenu.skin.rosacea",
+            fallback: "rosacea-treatment-malaysia",
+          },
+          {
+            key: "submenu.skin.stretchMark",
+            fallback: "stretch-mark-removal-malaysia",
+          },
+          {
+            key: "submenu.skin.laserHair",
+            fallback: "laser-hair-removal-malaysia",
+          },
+          {
+            key: "submenu.skin.tattooRemoval",
+            fallback: "tattoo-removal-malaysia",
+          },
         ],
       },
       face: {
         label: "categories.face",
         fallback: "Face",
         items: [
-              { key: "submenu.face.botox", fallback: "botox-malaysia" },
-              { key: "submenu.face.cheekFiller", fallback: "cheek-filler-malaysia" },
-              { key: "submenu.face.chinFiller", fallback: "chin-filler-malaysia" },
-              { key: "submenu.face.dermalFiller", fallback: "dermal-filler-malaysia" },
-              { key: "submenu.face.jawlineFiller", fallback: "jawline-filler-malaysia" },
-              { key: "submenu.face.lipFiller", fallback: "lip-filler-malaysia" },
-              { key: "submenu.face.noseFiller", fallback: "nose-filler-malaysia" },
-              { key: "submenu.face.noseThread", fallback: "nose-thread-lift-malaysia" },
-              { key: "submenu.face.skinBooster", fallback: "skin-booster-malaysia" },
-              { key: "submenu.face.tearTrough", fallback: "tear-trough-filler-malaysia" },
-              { key: "submenu.face.underEye", fallback: "under-eye-filler-malaysia" },
+          { key: "submenu.face.botox", fallback: "botox-malaysia" },
+          {
+            key: "submenu.face.cheekFiller",
+            fallback: "cheek-filler-malaysia",
+          },
+          { key: "submenu.face.chinFiller", fallback: "chin-filler-malaysia" },
+          {
+            key: "submenu.face.dermalFiller",
+            fallback: "dermal-filler-malaysia",
+          },
+          {
+            key: "submenu.face.jawlineFiller",
+            fallback: "jawline-filler-malaysia",
+          },
+          { key: "submenu.face.lipFiller", fallback: "lip-filler-malaysia" },
+          { key: "submenu.face.noseFiller", fallback: "nose-filler-malaysia" },
+          {
+            key: "submenu.face.noseThread",
+            fallback: "nose-thread-lift-malaysia",
+          },
+          {
+            key: "submenu.face.skinBooster",
+            fallback: "skin-booster-malaysia",
+          },
+          {
+            key: "submenu.face.tearTrough",
+            fallback: "tear-trough-filler-malaysia",
+          },
+          {
+            key: "submenu.face.underEye",
+            fallback: "under-eye-filler-malaysia",
+          },
         ],
       },
       hair: {
         label: "categories.hair",
         fallback: "Hair",
         items: [
-          { key: "submenu.hair.transplant", fallback: "hair-transplant-malaysia" },
+          {
+            key: "submenu.hair.transplant",
+            fallback: "hair-transplant-malaysia",
+          },
           { key: "submenu.hair.fue", fallback: "fue-hair-transplant-malaysia" },
           { key: "submenu.hair.prp", fallback: "prp-hair-treatment-malaysia" },
-          { key: "submenu.hair.lossTreatment", fallback: "hair-loss-treatment-malaysia" },
+          {
+            key: "submenu.hair.lossTreatment",
+            fallback: "hair-loss-treatment-malaysia",
+          },
           { key: "submenu.hair.beard", fallback: "beard-transplant-malaysia" },
-          { key: "submenu.hair.mesotherapy", fallback: "mesotherapy-hair-loss-malaysia" },
-          { key: "submenu.hair.exosome", fallback: "exosome-hair-treatment-malaysia" },
-          { key: "submenu.hair.minoxidil", fallback: "minoxidil-treatment-malaysia" },
-          { key: "submenu.hair.finasteride", fallback: "finasteride-treatment-malaysia" },
+          {
+            key: "submenu.hair.mesotherapy",
+            fallback: "mesotherapy-hair-loss-malaysia",
+          },
+          {
+            key: "submenu.hair.exosome",
+            fallback: "exosome-hair-treatment-malaysia",
+          },
+          {
+            key: "submenu.hair.minoxidil",
+            fallback: "minoxidil-treatment-malaysia",
+          },
+          {
+            key: "submenu.hair.finasteride",
+            fallback: "finasteride-treatment-malaysia",
+          },
         ],
       },
       regenerative: {
         label: "categories.regenerative",
         fallback: "Regenerative",
         items: [
-          { key: "submenu.regenerative.testosterone", fallback: "testosterone-therapy-malaysia" },
+          {
+            key: "submenu.regenerative.testosterone",
+            fallback: "testosterone-therapy-malaysia",
+          },
           { key: "submenu.regenerative.ed", fallback: "ed-treatment-malaysia" },
-          { key: "submenu.regenerative.hormoneReplacement", fallback: "hormone-replacement-therapy-malaysia" },
-          { key: "submenu.regenerative.pcos", fallback: "pcos-treatment-malaysia" },
-          { key: "submenu.regenerative.hypothyroidism", fallback: "hypothyroidism-treatment-malaysia" },
-          { key: "submenu.regenerative.stemCell", fallback: "stem-cell-therapy-malaysia" },
-          { key: "submenu.regenerative.antiAging", fallback: "anti-aging-therapy-malaysia" },
-          { key: "submenu.regenerative.hormoneTest", fallback: "hormone-test-malaysia" },
-          { key: "submenu.regenerative.menopause", fallback: "menopause-hormone-replacement-malaysia" },
+          {
+            key: "submenu.regenerative.hormoneReplacement",
+            fallback: "hormone-replacement-therapy-malaysia",
+          },
+          {
+            key: "submenu.regenerative.pcos",
+            fallback: "pcos-treatment-malaysia",
+          },
+          {
+            key: "submenu.regenerative.hypothyroidism",
+            fallback: "hypothyroidism-treatment-malaysia",
+          },
+          {
+            key: "submenu.regenerative.stemCell",
+            fallback: "stem-cell-therapy-malaysia",
+          },
+          {
+            key: "submenu.regenerative.antiAging",
+            fallback: "anti-aging-therapy-malaysia",
+          },
+          {
+            key: "submenu.regenerative.hormoneTest",
+            fallback: "hormone-test-malaysia",
+          },
+          {
+            key: "submenu.regenerative.menopause",
+            fallback: "menopause-hormone-replacement-malaysia",
+          },
           { key: "submenu.regenerative.pShot", fallback: "p-shot-malaysia" },
           { key: "submenu.regenerative.oShot", fallback: "o-shot-malaysia" },
-          { key: "submenu.regenerative.shockwave", fallback: "shockwave-therapy-malaysia" },
+          {
+            key: "submenu.regenerative.shockwave",
+            fallback: "shockwave-therapy-malaysia",
+          },
         ],
       },
     },
@@ -124,7 +264,7 @@ const navItems = [
 ];
 
 const languages = [
-  { code: "EN", label: "English", flag: "🇺🇸" },  
+  { code: "EN", label: "English", flag: "🇺🇸" },
   { code: "ID", label: "Indonesia", flag: "🇮🇩" },
   { code: "MS", label: "Melayu", flag: "🇲🇾" },
   { code: "ZH", label: "中文", flag: "🇨🇳" },
@@ -141,30 +281,35 @@ const categoryLabels: Record<string, { key: string; fallback: string }> = {
 
 type SearchResult = { label: string; href: string; category: string };
 
-const buildSearchIndex = (getText: (key: string, fallback: string) => string): SearchResult[] => {
+const buildSearchIndex = (
+  getText: (key: string, fallback: string) => string,
+): SearchResult[] => {
   const results: SearchResult[] = [];
   navItems.forEach((item) => {
     if (item.submenu) {
-      Object.entries(item.submenu).forEach(([category, categoryData]: [string, any]) => {
-        categoryData.items.forEach((subItem: { key: string; fallback: string }) => {
-          results.push({
-            label: getText(subItem.key, subItem.fallback),
-            href: `/${category}/${subItem.fallback}/`,
-            category: category,
-          });
-        });
-      });
+      Object.entries(item.submenu).forEach(
+        ([category, categoryData]: [string, any]) => {
+          categoryData.items.forEach(
+            (subItem: { key: string; fallback: string }) => {
+              results.push({
+                label: getText(subItem.key, subItem.fallback),
+                href: `/${category}/${subItem.fallback}/`,
+                category: category,
+              });
+            },
+          );
+        },
+      );
     } else if (item.href && item.href !== "#") {
-      results.push({ 
-        label: getText(item.label, item.fallback), 
-        href: item.href, 
-        category: "page" 
+      results.push({
+        label: getText(item.label, item.fallback),
+        href: item.href,
+        category: "page",
       });
     }
   });
   return results;
 };
-
 
 const highlightMatch = (text: string, query: string) => {
   if (!query) return <>{text}</>;
@@ -180,7 +325,6 @@ const highlightMatch = (text: string, query: string) => {
     </>
   );
 };
-
 
 const DesktopSearchBox = ({
   isScrolled,
@@ -316,7 +460,8 @@ const DesktopSearchBox = ({
                       <p className="text-taupe/70 text-xs font-inter">
                         {getText(
                           categoryLabels[item.category]?.key || item.category,
-                          categoryLabels[item.category]?.fallback || item.category
+                          categoryLabels[item.category]?.fallback ||
+                            item.category,
                         )}
                       </p>
                     </div>
@@ -470,7 +615,8 @@ const MobileInlineSearch = ({
                       <p className="text-taupe/70 text-xs">
                         {getText(
                           categoryLabels[item.category]?.key || item.category,
-                          categoryLabels[item.category]?.fallback || item.category
+                          categoryLabels[item.category]?.fallback ||
+                            item.category,
                         )}
                       </p>
                     </div>
@@ -504,24 +650,27 @@ const Navbar = ({ locale }: { locale?: string }) => {
 
   // Check if current page is blogs page
   useEffect(() => {
-    const isBlogs = pathname.includes('/blogs');
+    const isBlogs = pathname.includes("/blogs");
     setIsBlogsPage(isBlogs);
-    
+
     // On blogs page, force locale to 'en' for display
     if (isBlogs) {
-      setCurrentLocale('en');
+      setCurrentLocale("en");
     } else {
       setCurrentLocale(locale);
     }
   }, [pathname, locale]);
 
-  const getText = useCallback((key: string, fallback: string) => {
-    if (isBlogsPage) {
-      return fallback; // Always return English fallback on blogs page
-    }
-    const translated = t(key);
-    return translated === key ? fallback : translated;
-  }, [isBlogsPage, t]);
+  const getText = useCallback(
+    (key: string, fallback: string) => {
+      if (isBlogsPage) {
+        return fallback; // Always return English fallback on blogs page
+      }
+      const translated = t(key);
+      return translated === key ? fallback : translated;
+    },
+    [isBlogsPage, t],
+  );
 
   const [searchIndex, setSearchIndex] = useState<SearchResult[]>([]);
 
@@ -531,30 +680,36 @@ const Navbar = ({ locale }: { locale?: string }) => {
   }, [getText]); // Only depend on getText, remove isBlogsPage
 
   // Build locale-aware href for language switcher
-  const getLocaleHref = useCallback((langCode: string) => {
-    const localePrefix = /^\/(en|id|ar|ms|zh)(\/|$)/;
-    const match = pathname.match(localePrefix);
-    const basePath = match ? pathname.replace(localePrefix, "/") : pathname;
-    const cleanPath = basePath === "" ? "/" : basePath;
+  const getLocaleHref = useCallback(
+    (langCode: string) => {
+      const localePrefix = /^\/(en|id|ar|ms|zh)(\/|$)/;
+      const match = pathname.match(localePrefix);
+      const basePath = match ? pathname.replace(localePrefix, "/") : pathname;
+      const cleanPath = basePath === "" ? "/" : basePath;
 
-    if (langCode === "en") {
-      return cleanPath;
-    }
+      if (langCode === "en") {
+        return cleanPath;
+      }
 
-    return cleanPath === "/" ? `/${langCode}` : `/${langCode}${cleanPath}`;
-  }, [pathname]);
+      return cleanPath === "/" ? `/${langCode}` : `/${langCode}${cleanPath}`;
+    },
+    [pathname],
+  );
 
   // Build locale-aware href for nav links - blogs always go to /blogs without locale
-  const getNavHref = useCallback((path: string) => {
-    // If it's the blogs link, always go to /blogs without locale prefix
-    if (path === '/blogs') {
-      return '/blogs';
-    }
-    
-    // For other paths, add locale prefix if not English
-    if (!currentLocale || currentLocale === "en") return path;
-    return `/${currentLocale}${path}`;
-  }, [currentLocale]);
+  const getNavHref = useCallback(
+    (path: string) => {
+      // If it's the blogs link, always go to /blogs without locale prefix
+      if (path === "/blogs") {
+        return "/blogs";
+      }
+
+      // For other paths, add locale prefix if not English
+      if (!currentLocale || currentLocale === "en") return path;
+      return `/${currentLocale}${path}`;
+    },
+    [currentLocale],
+  );
 
   useEffect(() => {
     const checkTime = () => {
@@ -764,23 +919,41 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                     <div className="flex items-center gap-2 mb-4">
                                       <h4 className="text-brown font-georgia font-semibold text-sm">
                                         {getText(
-                                          categoryData.label || categoryLabels[category]?.key || category,
-                                          categoryData.fallback || categoryLabels[category]?.fallback || category
+                                          categoryData.label ||
+                                            categoryLabels[category]?.key ||
+                                            category,
+                                          categoryData.fallback ||
+                                            categoryLabels[category]
+                                              ?.fallback ||
+                                            category,
                                         )}
                                       </h4>
                                     </div>
                                     <div className="h-px bg-linear-to-r from-wine/20 to-transparent mb-3" />
                                     <ul className="space-y-0.5">
                                       {categoryData.items.map(
-                                        (subItem: { key: string; fallback: string }, idx: number) => (
+                                        (
+                                          subItem: {
+                                            key: string;
+                                            fallback: string;
+                                          },
+                                          idx: number,
+                                        ) => (
                                           <li key={idx}>
                                             <motion.a
-                                              href={getNavHref(`/${category}/${subItem.fallback}/`)}
+                                              href={getNavHref(
+                                                `/${category}/${subItem.fallback}/`,
+                                              )}
                                               whileHover={{ x: 4 }}
                                               className="group/item flex items-center gap-2 text-taupe hover:text-wine text-sm py-1.5 transition-all duration-200"
                                             >
                                               <span className="w-1.5 h-1.5 rounded-full bg-taupe/30 group-hover/item:bg-wine group-hover/item:scale-125 transition-all duration-200" />
-                                              <span>{getText(subItem.key, subItem.fallback)}</span>
+                                              <span>
+                                                {getText(
+                                                  subItem.key,
+                                                  subItem.fallback,
+                                                )}
+                                              </span>
                                             </motion.a>
                                           </li>
                                         ),
@@ -802,10 +975,16 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                 </div>
                                 <div>
                                   <p className="text-brown font-inter font-medium text-sm">
-                                    {getText("common.startTransformation", "Start Your Transformation")}
+                                    {getText(
+                                      "common.startTransformation",
+                                      "Start Your Transformation",
+                                    )}
                                   </p>
                                   <p className="text-taupe text-xs">
-                                    {getText("nav.bookConsultation", "Book Your Consultation")}
+                                    {getText(
+                                      "nav.bookConsultation",
+                                      "Book Your Consultation",
+                                    )}
                                   </p>
                                 </div>
                               </div>
@@ -813,7 +992,9 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                 whileHover={{ x: 4 }}
                                 className="flex items-center gap-1 text-wine font-inter font-semibold text-sm"
                               >
-                                <span>{getText("nav.bookNow", "Book Now")}</span>
+                                <span>
+                                  {getText("nav.bookNow", "Book Now")}
+                                </span>
                                 <ChevronRight size={16} />
                               </motion.div>
                             </a>
@@ -827,9 +1008,9 @@ const Navbar = ({ locale }: { locale?: string }) => {
 
               {/* Desktop Search */}
               <div className="ml-2">
-                <DesktopSearchBox 
-                  isScrolled={isScrolled} 
-                  locale={currentLocale} 
+                <DesktopSearchBox
+                  isScrolled={isScrolled}
+                  locale={currentLocale}
                   getText={getText}
                   searchIndex={searchIndex}
                 />
@@ -884,7 +1065,11 @@ const Navbar = ({ locale }: { locale?: string }) => {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: idx * 0.03 }}
-                              whileHover={{ backgroundColor: "#F3EFEE",borderColor: "#8C4F58",scale: 1.02 }}
+                              whileHover={{
+                                backgroundColor: "#F3EFEE",
+                                borderColor: "#8C4F58",
+                                scale: 1.02,
+                              }}
                               className="flex items-center gap-3 px-4 py-2.5 text-brown border-b border-cream transition-colors"
                             >
                               {/* <span className="text-lg">{lang.flag}</span> */}
@@ -1066,7 +1251,10 @@ const Navbar = ({ locale }: { locale?: string }) => {
                               >
                                 <div className="bg-cream/30 rounded-xl mt-2 mb-3 p-4 space-y-6">
                                   {Object.entries(item.submenu).map(
-                                    ([category, categoryData]: [string, any], catIdx) => (
+                                    (
+                                      [category, categoryData]: [string, any],
+                                      catIdx,
+                                    ) => (
                                       <motion.div
                                         key={category}
                                         initial={{ opacity: 0, y: 10 }}
@@ -1076,17 +1264,30 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                         <div className="flex items-center gap-2 mb-3">
                                           <h5 className="text-wine font-georgia font-semibold text-sm">
                                             {getText(
-                                              categoryData.label || categoryLabels[category]?.key || category,
-                                              categoryData.fallback || categoryLabels[category]?.fallback || category
+                                              categoryData.label ||
+                                                categoryLabels[category]?.key ||
+                                                category,
+                                              categoryData.fallback ||
+                                                categoryLabels[category]
+                                                  ?.fallback ||
+                                                category,
                                             )}
                                           </h5>
                                         </div>
                                         <div className="grid grid-cols-1 gap-1">
                                           {categoryData.items.map(
-                                            (subItem: { key: string; fallback: string }, idx: number) => (
+                                            (
+                                              subItem: {
+                                                key: string;
+                                                fallback: string;
+                                              },
+                                              idx: number,
+                                            ) => (
                                               <motion.a
                                                 key={idx}
-                                                href={getNavHref(`/${category}/${subItem.fallback}/`)}
+                                                href={getNavHref(
+                                                  `/${category}/${subItem.fallback}/`,
+                                                )}
                                                 initial={{ opacity: 0, x: -10 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{
@@ -1095,7 +1296,10 @@ const Navbar = ({ locale }: { locale?: string }) => {
                                                 className="text-taupe hover:text-wine text-sm py-2.5 px-3 rounded-lg hover:bg-light transition-all duration-200 flex items-center gap-2"
                                               >
                                                 <span className="w-1.5 h-1.5 rounded-full bg-taupe/30" />
-                                                {getText(subItem.key, subItem.fallback)}
+                                                {getText(
+                                                  subItem.key,
+                                                  subItem.fallback,
+                                                )}
                                               </motion.a>
                                             ),
                                           )}
@@ -1163,7 +1367,12 @@ const Navbar = ({ locale }: { locale?: string }) => {
                       className="flex max-w-[93%] items-center justify-center gap-2 bg-wine text-light px-6 py-4 rounded-xl font-inter font-semibold text-center shadow-lg shadow-wine/20 hover:bg-wine/90 transition-all duration-200"
                     >
                       <Calendar size={18} />
-                      <span>{getText("nav.bookConsultation", "Book Your Consultation")}</span>
+                      <span>
+                        {getText(
+                          "nav.bookConsultation",
+                          "Book Your Consultation",
+                        )}
+                      </span>
                     </a>
                     <a
                       href="tel:0167025699"
