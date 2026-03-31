@@ -17,10 +17,6 @@ import {
   type GalleryItem,
   type GalleryCategory,
 } from "@/src/lib/data";
-
-// ─────────────────────────────────────────────
-// BEFORE / AFTER DRAG SLIDER
-// ─────────────────────────────────────────────
 function BeforeAfterSlider({
   item,
   priority = false,
@@ -101,9 +97,6 @@ function BeforeAfterSlider({
   );
 }
 
-// ─────────────────────────────────────────────
-// GALLERY CARD
-// ─────────────────────────────────────────────
 function GalleryCard({
   item,
   index,
@@ -179,9 +172,6 @@ function GalleryCard({
   );
 }
 
-// ─────────────────────────────────────────────
-// LIGHTBOX MODAL
-// ─────────────────────────────────────────────
 function LightboxModal({
   item,
   onClose,
@@ -300,9 +290,6 @@ function LightboxModal({
   );
 }
 
-// ─────────────────────────────────────────────
-// GALLERY PAGE
-// ─────────────────────────────────────────────
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>("All");
   const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
@@ -361,7 +348,7 @@ export default function GalleryPage() {
             >
               Real Results,
               <br />
-              <em className="text-wine not-italic italic">Real People</em>
+              <em className="text-wine italic">Real People</em>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

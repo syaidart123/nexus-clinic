@@ -7,9 +7,9 @@ export default function BlogsLayout({
 }) {
   return (
     <>
-    <Navbar />
-    {children}
-    <Footer />
+      <Navbar />
+      {children}
+      <Footer />
     </>
   );
 }

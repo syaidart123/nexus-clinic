@@ -17,8 +17,8 @@ import {
 import { useTranslation } from "react-i18next";
 
 const navItems = [
-  { label: "nav.gallery", fallback: "Gallery", href: "#gallery" },
-  { label: "nav.doctors", fallback: "Doctors", href: "#doctors" },
+  { label: "nav.gallery", fallback: "Gallery", href: "/gallery" },
+  { label: "nav.doctors", fallback: "Doctors", href: "/doctors" },
   {
     label: "nav.weightLoss",
     fallback: "Weight Loss",
